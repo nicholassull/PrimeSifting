@@ -19,14 +19,19 @@ namespace PrimeSifter
       } 
       else
       {
-        Sifter newSifter = new Sifter(userNumber);
-        List<int> primeList = newSifter.FindPrimes();
-        Console.WriteLine("=========================");
-        Console.WriteLine("The primes between 2 and " + userNumber.ToString() + ":");
-        foreach (int number in primeList)
-        {
-          Console.WriteLine(number);
-        }
+        GetPrimes(userNumber);
+        Console.WriteLine("Goodbye!");
+      }
+    }
+    static void GetPrimes(int userNumber)
+    {
+      Sifter newSifter = new Sifter(userNumber);
+      List<int> primeList = newSifter.FindPrimes();
+      Console.WriteLine("=========================");
+      Console.WriteLine("The primes between 2 and " + userNumber.ToString() + ":");
+      foreach (int number in primeList)
+      {
+        Console.WriteLine(number);
       }
     }
 
