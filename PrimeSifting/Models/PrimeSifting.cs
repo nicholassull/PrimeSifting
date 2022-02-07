@@ -32,7 +32,7 @@ namespace PrimeSifter.Models
       {
         foreach(int number in List01)
         {
-          if (number == prime)
+          if (number == Prime)
           {
             continue;
           }
@@ -43,6 +43,7 @@ namespace PrimeSifter.Models
         }
         Prime ++;
       }
+      return List02;
     }
   }
 }

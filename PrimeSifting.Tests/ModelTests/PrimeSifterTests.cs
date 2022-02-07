@@ -23,5 +23,14 @@ namespace PrimeSifter.TestTools
       List<int> result = newSifter.List01;
       CollectionAssert.AreEqual(testList, result);
     }
+    [TestMethod]
+    public void FindPrimes_CreateListOfPrimes_IntList()
+    {
+      Sifter newSifter = new Sifter(32);
+      List<int> testList = new List<int> {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31};
+
+      List<int> result = newSifter.FindPrimes();
+      CollectionAssert.AreEqual(testList, result);
+    }
   }
 }
